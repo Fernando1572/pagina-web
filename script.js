@@ -1,178 +1,205 @@
 /**
- * Esta fue la solucion que se me ocurrio para cambiar el link del video
+ * Mi solucion original para este problema era muy larga pero era funcional, 
+ * pero por culpa del profe, tuve que cambiar todo nomas
+ * para usar arreglos ridiculamente largos y una funcion para todo
+ * y asi evitar codigo repetitivo (estaba mejor lo que yo habia hecho por que si lo hice yo y sabia como funcionaba).
+ */
+/*
+~~~~^^^^^^^^:::::::::..:.::.:::..:::::::::^::^^:^:^^^:^^:^:^^::^::::::.:::..::......................
+^^^::::::::::::::::::::::::::::::::^^^^^^^^~!^^^^^^^^^:^^:^^::::::::::..:........:..................
+:::::::::::::::::::::^::^^:^^^^^^^^^~^~^^^^?7?!~::^^:::::::::::::..::.......:....:..................
+:::::::::::^^^^^^^^^^^^~~~~~~~~~~~~^~^^^^~J!.^!??7~~^:::::::...:..:.:..::::..:..::..................
+^:^^^^^^^^^^^~~~~~~~~~!!~!~~!~~~~^^^^^:~7J!.:::.^~77???777!7!~~~:...::.:::::::..::::.:..::..........
+~~~~~~~~~~~~!!!!!!!!!!!!!!~~~~~^^^::^!??~:..:.::.....:::::^^^~!777!~^::.::.::::::::::::::::..:......
+~~~!!!!!!!777777!!!!!~~~~~^^^^^:^!?J?7~:.::::.::..::.:::..::....::^~!??~^::::::::::::::::::..:......
+!!77!7777777!!!!~~~~~^^^^^^:^^7JJ?7~^::::.::.::..:::..::.::::..:.....:^7?7^::^::^::::::.::..........
+7777!7!!!!~~~~~^^~^^^^^^^^^~JYJ7~^^::::.:::::::::::::::::::::::::...:...:!J!::::::::.:..............
+!!~~~~~~~~~^~~^^^^^^^^^:^~Y577!!~^:::.::.::::::::.:::::::.::....:..:....:.:??:::.:..................
+~~^~~^^^^^^^^^^^^^^^~~~~YPJ777!~::::::::::::::::::::::::..::::.::.:::...:...7?..::...:.:..........:.
+~^^^^^^^^^^~~~~~!!!!!!7YY?7777!~:::..::.:.::.:::.:::..:::::::.:::...:..::..:.?!......:..............
+^^^~~~~~!!!!7!!77!!!!!JY??777!~~^^::::::::::::::::::::::::::::::::::::.::..::^?:::..::...:...:::::::
+~!!!7!777JYY5YJ7!~~!!7Y777!!~~^^::::::::.::::::::.:::..::.:::::::..::.:::::::.7^.:...:.:..:.::::::::
+777???YGPY7~^~!!JJ?7!J?!!!~~^^^~^^::::::::::..:::::^^^^^::::::::~~!!777?77??777~.:::::::::^::^::::::
+7!7JJ5B5J!:::...:^!?YY7~~~~!!!~~~^::...:::^^~!77??77!~~~:::::.:::::::::::::::::!?~:::^^::^::::::::^:
+!!?YJBPJ?!::::::::..:!?JJ?77!!~~^::^~7777?7!!~~^:::::::::::::::::::::::::::::::.^??^:^^:::::::^:::^:
+!!7??P5?7!^:::.::.:.::.^!?7!!!!~^~:~!!~^:::...::.::::::::.::::::::.:::::::..:....:~?!:::::::::::::::
+~~7?775J!!~^::::::::::::::^^~!!!~^::::::::::::::::::::::::::::::::::::::::::::::::.:??^:^^^^:^^:::::
+~^!!7!755?!!~^::::.::::::::^~~~~^^^:::::::::::::::::::::::::::::::::::.......::.:::^:?!:^^:^::^::::.
+~~~!77??J55YJ7!!~^::::::::::^^^~~~^:::::::::::::::::::::::::::::::^^~~~!777???77?77!~?7:^^^:::::..::
+~~~!!77????J555J?!~:^::::::::~~~~~~~^:::::::::::.::::^^~~~~!!7???????7!!!~~^^:::::..~J^::::.:::.:.::
+!!!7!!!!~^~!!7?J5YJJ7!~~^^:^~~~~~!~~^::::::::^!!777???7!~~^^^^:::::::...:.:.::::::^??^:::::.:.::::::
+!!!!~^^^^:^~^~^^^~!?J5J5J7~~~~^~~~~~~^:::::::^~~^^::::::::::::::::::::::::::::..^7J!.::.:::::::::^^:
+^^^^^::::::::::::::^~~!7Y?^~!77!!!!~~~~:::::::::::::::::::::::::::::::::::..:^!??!:.:::::::::^^^^^^^
+::::::::::::::::::::^^^^7YJ7!!!!!!!!777!~~~~::::::::::::::::::::::::::.:::^!?7!^.::::::^^^^^^^^^^:^^
+::::::::::::::::^^:^^^^^~~?5J7!77??7???77!!~^^^:::::::::::::::::::::::^~7!!~::::::^::^^^^~^^^^^^::^:
+::::::::^::^^:^^^^^^^^^~~!!7YPPYJ???77?77!7!~~~^~~:::::::::::::::::::~J?^:::::::^^^^^^^^^^^^^^^^:^^:
+:::^^:^^^^^^^^^^~^~~~~~!!!777?JJ5YJJJ?J?7777!7!~^::::::::::::::::::::::~?!^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^~^~~!!!!7777777777!!77?JJJGP?77!!!!~^:::::::::::::::::::::::^7?!^~~~^~^^^^^^^^^^^^^^^^^^
+:^^^^~^~~~~!!!!777777777777!7!!!!!77!YP77777777~^:::::::::::::::::::::::::^J7^^^^^^^^^^^^^^^^^^^^^^^
+^^~~~~~!!!7??7????????77777!!7!!!!!7JGJ?????7!~^::::::::^^^:^:^:::::^:::::::??^^^~^^^^^^^^^^~^^^^:::
 */
 
-/*Album 1*/
-/*I saw her standing here*/
-function album1vid1() { //No se te olvide cambiar los links cuando se levante youtube
-    const nuevoLink = "https://www.youtube.com/embed/oxwAB3SECtc?si=P1A1MU3YZZVMWYed"; 
-    document.getElementById("video1").src = nuevoLink;
+const albums = [
+    {
+        album: "Please Please Me",
+        anio: 1963,
+        discografica: "Parlophone",
+        num_canciones: 14,
+        canciones: [
+            {
+                titulo: "I Saw Her Standing There",
+                link: "https://www.youtube.com/embed/oxwAB3SECtc?si=P1A1MU3YZZVMWYed",
+                duracion: "2:53",
+            },
+            {
+                titulo: "Misery",
+                link: "https://www.youtube.com/embed/qhbcN3ew9z0?si=UWYeDuf2eRc8tc-8",
+                duracion: "1:48",
+            },
+            {
+                titulo: "Anna (Go To Him)",
+                link: "https://www.youtube.com/embed/b3zNKWyLfus?si=n6eFnKPkFLZTEiPG",
+                duracion: "2:57",
+            },
+            {
+                titulo: "Chains",
+                link: "https://www.youtube.com/embed/rJOhavaeJYk?si=oTgThdrhr_Cssrj0",
+                duracion: "2:26",
+            },
+            {
+                titulo: "Boys",
+                link: "https://www.youtube.com/embed/Qr8OuW5JJgQ?si=df6E2diY-HUR2AZ6",
+                duracion: "2:27",
+            },
+            {
+                titulo: "Ask Me Why",
+                link: "https://www.youtube.com/embed/2ttGjtfQ7EA?si=_I874aTAVsX5mwpO",
+                duracion: "2:24",
+            },
+            {
+                titulo: "Please Please Me",
+                link: "https://www.youtube.com/embed/czw8eqepir8?si=EvAp9g_aURLnfoAT",
+                duracion: "1:59",
+            },
+            {
+                titulo: "Love Me Do",
+                link: "https://www.youtube.com/embed/0pGOFX1D_jg?si=dyMiHObwFWeTfeUg",
+                duracion: "2:23",
+            },
+            {
+                titulo: "P.S. I Love You",
+                link: "https://www.youtube.com/embed/MA5DkiVKSlM?si=rFGK5H_3G-FI9fGZ",
+                duracion: "2:04",
+            },
+            {
+                titulo: "Baby It's You",
+                link: "https://www.youtube.com/embed/AWUTlM6hz0g?si=pnHTmz4XOOOeOFYv",
+                duracion: "2:38",
+            },
+            {
+                titulo: "Do You Want To Know A Secret",
+                link: "https://www.youtube.com/embed/uRQ7ecvU56k?si=UGEdOscQVuETbg_p",
+                duracion: "1:57",
+            },
+            {
+                titulo: "A Taste Of Honey",
+                link: "https://www.youtube.com/embed/MkQ1eOcl5ug?si=PlVFvWuhF4dVQxNK",
+                duracion: "2:04",
+            },
+            {
+                titulo: "There's A Place",
+                link: "https://www.youtube.com/embed/vTsbYbN8VVI?si=84Vo2So-fNBbCGNz",
+                duracion: "1:50",
+            },
+            {
+                titulo: "Twist And Shout",
+                link: "https://www.youtube.com/embed/2RicaUqd9Hg?si=1WV5gLEkK8Jiia1a",
+                duracion: "2:33",
+            }
+        ]
+    },
+    {
+        album: "Help!",
+        anio: 1965,
+        discografica: "Parlophone",
+        num_canciones: 14,
+        canciones: [
+            {
+                titulo: "Help!",
+                link: "https://www.youtube.com/embed/MKUex3fci5c?si=UkmtCOFf1ieYvZ_1",
+                duracion: "2:19",
+            },
+            {
+                titulo: "The Night Before",
+                link: "https://www.youtube.com/embed/7tD40D7jk-Q?si=iCsLD2m91Lnnd79x",
+                duracion: "2:34",
+            },
+            {
+                titulo: "You've Got To Hide Your Love Away",
+                link: "https://www.youtube.com/embed/V8nLraecPRY?si=_3XndXMVJT_Mm4Tl",
+                duracion: "2:08",
+            },
+            {
+                titulo: "I Need You",
+                link: "https://www.youtube.com/embed/6t24nX_sak8?si=s_XwMC1LwHmzsfPV",
+                duracion: "2:27",
+            },
+            {
+                titulo: "Another Girl",
+                link: "https://www.youtube.com/embed/EMBYNWr5R_U?si=95CKPKETApY5jAnw",
+                duracion: "2:05",
+            },
+            {
+                titulo: "You're Going To Lose That Girl",
+                link: "https://www.youtube.com/embed/vqpEZuv29qE?si=740qJDBwOnJUF2dO",
+                duracion: "2:17",
+            },
+            {
+                titulo: "Ticket To Ride",
+                link: "https://www.youtube.com/embed/SyNt5zm3U_M?si=RN6xDuV2OrYwAw6I",
+                duracion: "3:10",
+            },
+            {
+                titulo: "Act Naturally",
+                link: "https://www.youtube.com/embed/yjJd8rZPcAQ?si=TEFr6nKYoB8L-fcJ",
+                duracion: "2:31",
+            },
+            {
+                titulo: "It's Only Love",
+                link: "https://www.youtube.com/embed/OPiKDHYCkjs?si=RO8foMpx_8vTfV_y",
+                duracion: "1:56",
+            },
+            {
+                titulo: "You Like Me Too Much",
+                link: "https://www.youtube.com/embed/ZqCf3D26YlA?si=DDUjXj_pBEmS-pVb",
+                duracion: "2:36",
+            },
+            {
+                titulo: "Tell Me What You See",
+                link: "https://www.youtube.com/embed/bztiAcsATyI?si=BAIsbNiUM9i_sEeb",
+                duracion: "2:40",
+            },
+            {
+                titulo: "I've Just Seen a Face",
+                link: "https://www.youtube.com/embed/m8LbJfC0SYM?si=wGY0IVA1k0mVXmJ1",
+                duracion: "2:04",
+            },
+            {
+                titulo: "Yesterday",
+                link: "https://www.youtube.com/embed/NrgmdOz227I?si=tpGr5LjyJ3b_Tx83",
+                duracion: "2:05",
+            },
+            {
+                titulo: "Dizzy Miss Lizzle",
+                link: "https://www.youtube.com/embed/psJ1cHm_su4?si=_9DMCKaCGCjkOFi2",
+                duracion: "2:54",
+            }
+        ]
+    }
+];
+
+function cambiarVideo(albumIndex, cancionIndex) {
+    const video = document.getElementById(`video${albumIndex + 1}`);
+    const cancion = albums[albumIndex].canciones[cancionIndex];
+    video.src = cancion.link;
 }
-
-/*Misery*/
-function album1vid2() {
-    const nuevoLink = "https://www.youtube.com/embed/qhbcN3ew9z0?si=UWYeDuf2eRc8tc-8"; 
-    document.getElementById("video1").src = nuevoLink;
-}
-
-/*Anna (Go To Him)*/
-function album1vid3() {
-    const nuevoLink = "https://www.youtube.com/embed/b3zNKWyLfus?si=n6eFnKPkFLZTEiPG";
-    document.getElementById("video1").src = nuevoLink;
-}
-
-/*Chains*/
-function album1vid4() {
-    const nuevoLink = "https://www.youtube.com/embed/rJOhavaeJYk?si=oTgThdrhr_Cssrj0"; 
-    document.getElementById("video1").src = nuevoLink;
-}
-
-/*Boys*/
-function album1vid5() {
-    const nuevoLink = "https://www.youtube.com/embed/Qr8OuW5JJgQ?si=df6E2diY-HUR2AZ6"; 
-    document.getElementById("video1").src = nuevoLink;
-}
-
-/*Ask Me Why*/
-function album1vid6() {
-    const nuevoLink = "https://www.youtube.com/embed/2ttGjtfQ7EA?si=_I874aTAVsX5mwpO"; 
-    document.getElementById("video1").src = nuevoLink;
-}
-
-/*Please Please Me*/
-function album1vid7() {
-    const nuevoLink = "https://www.youtube.com/embed/czw8eqepir8?si=EvAp9g_aURLnfoAT"; 
-    document.getElementById("video1").src = nuevoLink;
-}
-
-/*Love Me Do*/
-function album1vid8() {
-    const nuevoLink = "https://www.youtube.com/embed/0pGOFX1D_jg?si=dyMiHObwFWeTfeUg"; 
-    document.getElementById("video1").src = nuevoLink;
-}
-
-/*P.S. I Love You*/
-function album1vid9() {
-    const nuevoLink = "https://www.youtube.com/embed/MA5DkiVKSlM?si=rFGK5H_3G-FI9fGZ"; 
-    document.getElementById("video1").src = nuevoLink;
-}
-
-/*Baby It's You*/
-function album1vid10() {
-    const nuevoLink = "https://www.youtube.com/embed/AWUTlM6hz0g?si=pnHTmz4XOOOeOFYv";
-    document.getElementById("video1").src = nuevoLink;
-}
-
-/*Do You Want To Know A Secret*/
-function album1vid11() {
-    const nuevoLink = "https://www.youtube.com/embed/uRQ7ecvU56k?si=UGEdOscQVuETbg_p"; 
-    document.getElementById("video1").src = nuevoLink;
-}
-
-/*A Taste Of Honey*/
-function album1vid12() {
-    const nuevoLink = "https://www.youtube.com/embed/MkQ1eOcl5ug?si=PlVFvWuhF4dVQxNK"; 
-    document.getElementById("video1").src = nuevoLink;
-}
-
-/*There's A Place*/
-function album1vid13() {
-    const nuevoLink = "https://www.youtube.com/embed/vTsbYbN8VVI?si=84Vo2So-fNBbCGNz"; 
-    document.getElementById("video1").src = nuevoLink;
-}
-
-/*Twist And Shout*/
-function album1vid14() {
-    const nuevoLink = "https://www.youtube.com/embed/2RicaUqd9Hg?si=1WV5gLEkK8Jiia1a"; 
-    document.getElementById("video1").src = nuevoLink;
-}
-
-/*Fin Album 1*/
-
-/*Album 2*/
-
-/*Help!*/
-function album2vid1() {
-    const nuevoLink = "https://www.youtube.com/embed/MKUex3fci5c?si=UkmtCOFf1ieYvZ_1"; 
-    document.getElementById("video2").src = nuevoLink;
-}
-
-/*The Night Before*/
-function album2vid2() {
-    const nuevoLink = "https://www.youtube.com/embed/7tD40D7jk-Q?si=iCsLD2m91Lnnd79x"; 
-    document.getElementById("video2").src = nuevoLink;
-}
-
-/*You've Got To Hide Your Love Away*/
-function album2vid3() {
-    const nuevoLink = "https://www.youtube.com/embed/V8nLraecPRY?si=_3XndXMVJT_Mm4Tl"; 
-    document.getElementById("video2").src = nuevoLink;
-}
-
-/*I Need You*/
-function album2vid4() {
-    const nuevoLink = "https://www.youtube.com/embed/6t24nX_sak8?si=s_XwMC1LwHmzsfPV"; 
-    document.getElementById("video2").src = nuevoLink;
-}
-
-/*Another Girl*/
-function album2vid5() {
-    const nuevoLink = "https://www.youtube.com/embed/EMBYNWr5R_U?si=95CKPKETApY5jAnw"; 
-    document.getElementById("video2").src = nuevoLink;
-}
-
-/*You're Going To Lose That Girl*/
-function album2vid6() {
-    const nuevoLink = "https://www.youtube.com/embed/vqpEZuv29qE?si=740qJDBwOnJUF2dO"; 
-    document.getElementById("video2").src = nuevoLink;
-}
-
-/*Ticket To Ride*/
-function album2vid7() {
-    const nuevoLink = "https://www.youtube.com/embed/SyNt5zm3U_M?si=RN6xDuV2OrYwAw6I"; 
-    document.getElementById("video2").src = nuevoLink;
-}
-
-/*Act Naturally*/
-function album2vid8() {
-    const nuevoLink = "https://www.youtube.com/embed/yjJd8rZPcAQ?si=TEFr6nKYoB8L-fcJ"; 
-    document.getElementById("video2").src = nuevoLink;
-}
-
-/*It's Only Love*/
-function album2vid9() {
-    const nuevoLink = "https://www.youtube.com/embed/OPiKDHYCkjs?si=RO8foMpx_8vTfV_y"; 
-    document.getElementById("video2").src = nuevoLink;
-}
-
-/*You Like Me Too Much*/
-function album2vid10() {
-    const nuevoLink = "https://www.youtube.com/embed/ZqCf3D26YlA?si=DDUjXj_pBEmS-pVb"; 
-    document.getElementById("video2").src = nuevoLink;
-}
-
-/*Tell Me What You See*/
-function album2vid11() {
-    const nuevoLink = "https://www.youtube.com/embed/bztiAcsATyI?si=BAIsbNiUM9i_sEeb"; 
-    document.getElementById("video2").src = nuevoLink;
-}
-
-/*I've Just Seen a Face*/
-function album2vid12() {
-    const nuevoLink = "https://www.youtube.com/embed/m8LbJfC0SYM?si=wGY0IVA1k0mVXmJ1"; 
-    document.getElementById("video2").src = nuevoLink;
-}
-
-/*Yesterday*/
-function album2vid13() {
-    const nuevoLink = "https://www.youtube.com/embed/NrgmdOz227I?si=tpGr5LjyJ3b_Tx83"; 
-    document.getElementById("video2").src = nuevoLink;
-}
-
-/*Dizzy Miss Lizzle*/
-function album2vid14() {
-    const nuevoLink = "https://www.youtube.com/embed/psJ1cHm_su4?si=_9DMCKaCGCjkOFi2"; 
-    document.getElementById("video2").src = nuevoLink;
-}
-
-/*Fin Album 2*/

@@ -1,8 +1,8 @@
 /**
- * Mi solucion original para este problema era muy larga pero era funcional, 
+ * Mi solucion original para este problema muy larga pero era funcional, 
  * pero por culpa del profe, tuve que cambiar todo nomas
  * para usar arreglos ridiculamente largos y una funcion para todo
- * y asi evitar codigo repetitivo (estaba mejor lo que yo habia hecho por que si lo hice yo y sabia como funcionaba).
+ * y asi evitar codigo repetitivo (estaba mejor lo que yo habia hecho por que si lo hice yo y no el profe).
  */
 /*
 ~~~~^^^^^^^^:::::::::..:.::.:::..:::::::::^::^^:^:^^^:^^:^:^^::^::::::.:::..::......................
@@ -39,160 +39,160 @@
 ^^~~~~~!!!7??7????????77777!!7!!!!!7JGJ?????7!~^::::::::^^^:^:^:::::^:::::::??^^^~^^^^^^^^^^~^^^^:::
 */
 
+/**
+ * Y ahora resulta que para subir esto y entregarlo de una m*****a vez, tengo que poner albums diferentes y als canciones de ese album :!
+ */
+
+
 const albums = [
     {
-        album: "Please Please Me",
+        album: "Whit the Beatles",
         anio: 1963,
-        discografica: "Parlophone",
+        discografica: "Odeon",
         num_canciones: 14,
         canciones: [
             {
-                titulo: "I Saw Her Standing There",
-                link: "https://www.youtube.com/embed/oxwAB3SECtc?si=P1A1MU3YZZVMWYed",
-                duracion: "2:53",
+                titulo: "It Won't Be Long",
+                link: "https://www.youtube.com/embed/UVKU6SevefY?si=rBAIdj5W7jupWVc2",
+                duracion: "2:14",
             },
             {
-                titulo: "Misery",
-                link: "https://www.youtube.com/embed/qhbcN3ew9z0?si=UWYeDuf2eRc8tc-8",
-                duracion: "1:48",
+                titulo: "All I've Got to Do",
+                link: "https://www.youtube.com/embed/anMW41uvb_s?si=FODgUDtEi35vfNR8",
+                duracion: "2:03",
             },
             {
-                titulo: "Anna (Go To Him)",
-                link: "https://www.youtube.com/embed/b3zNKWyLfus?si=n6eFnKPkFLZTEiPG",
-                duracion: "2:57",
+                titulo: "All My Loving",
+                link: "https://www.youtube.com/embed/TSpiwK5fig0?si=rB0wxalttTDiH3xO",
+                duracion: "2:08",
             },
             {
-                titulo: "Chains",
-                link: "https://www.youtube.com/embed/rJOhavaeJYk?si=oTgThdrhr_Cssrj0",
-                duracion: "2:26",
+                titulo: "Don't Bother Me",
+                link: "https://www.youtube.com/embed/k03IQbaTcxc?si=YNC0KCVFyFomullF",
+                duracion: "2:29",
             },
             {
-                titulo: "Boys",
-                link: "https://www.youtube.com/embed/Qr8OuW5JJgQ?si=df6E2diY-HUR2AZ6",
-                duracion: "2:27",
+                titulo: "Little Child",
+                link: "https://www.youtube.com/embed/DVMfLIoejTc?si=sPfwHmybuylVFlz-",
+                duracion: "1:47",
             },
             {
-                titulo: "Ask Me Why",
-                link: "https://www.youtube.com/embed/2ttGjtfQ7EA?si=_I874aTAVsX5mwpO",
-                duracion: "2:24",
+                titulo: "Till There Was You",
+                link: "https://www.youtube.com/embed/SHAqAO7w8M8?si=JHFhyLahvHokXC-E",
+                duracion: "2:14",
             },
             {
-                titulo: "Please Please Me",
-                link: "https://www.youtube.com/embed/czw8eqepir8?si=EvAp9g_aURLnfoAT",
-                duracion: "1:59",
+                titulo: "Please Mister Postman",
+                link: "https://www.youtube.com/embed/v2Kk5IG2b8E?si=RkI09BoT-sdNgaq_",
+                duracion: "2:35",
             },
             {
-                titulo: "Love Me Do",
-                link: "https://www.youtube.com/embed/0pGOFX1D_jg?si=dyMiHObwFWeTfeUg",
-                duracion: "2:23",
+                titulo: "Roll Over Beethoven",
+                link: "https://www.youtube.com/embed/Hz5jXwOXgKQ?si=vex6FMWGxrC_H2Ea",
+                duracion: "2:45",
             },
             {
-                titulo: "P.S. I Love You",
-                link: "https://www.youtube.com/embed/MA5DkiVKSlM?si=rFGK5H_3G-FI9fGZ",
-                duracion: "2:04",
+                titulo: "Hold Me Tight",
+                link: "https://www.youtube.com/embed/H42Ou13za30?si=AVXAQ27le3L48YLJ",
+                duracion: "2:31",
             },
             {
-                titulo: "Baby It's You",
-                link: "https://www.youtube.com/embed/AWUTlM6hz0g?si=pnHTmz4XOOOeOFYv",
+                titulo: "You Really Got A Hold On Me",
+                link: "https://www.youtube.com/embed/9rokS8Ao4nQ?si=spi4kPF0JsHoDxeJ",
                 duracion: "2:38",
             },
             {
-                titulo: "Do You Want To Know A Secret",
-                link: "https://www.youtube.com/embed/uRQ7ecvU56k?si=UGEdOscQVuETbg_p",
-                duracion: "1:57",
+                titulo: "I Wanna Be Your Man",
+                link: "https://www.youtube.com/embed/mnct7Qf3SUQ?si=nvX3JiTEhjLntgJd",
+                duracion: "2:00",
             },
             {
-                titulo: "A Taste Of Honey",
-                link: "https://www.youtube.com/embed/MkQ1eOcl5ug?si=PlVFvWuhF4dVQxNK",
-                duracion: "2:04",
+                titulo: "Devil In Her Heart",
+                link: "https://www.youtube.com/embed/IGe-jfFrxCk?si=zp2B59x0rD2xlyzs",
+                duracion: "2:26",
             },
             {
-                titulo: "There's A Place",
-                link: "https://www.youtube.com/embed/vTsbYbN8VVI?si=84Vo2So-fNBbCGNz",
-                duracion: "1:50",
+                titulo: "Not A Second Time",
+                link: "https://www.youtube.com/embed/Gi8dTDuRCOk?si=lmzkb9jFFK3t03L_",
+                duracion: "2:06",
             },
             {
-                titulo: "Twist And Shout",
-                link: "https://www.youtube.com/embed/2RicaUqd9Hg?si=1WV5gLEkK8Jiia1a",
+                titulo: "Money (That's What I Want)",
+                link: "https://www.youtube.com/embed/CeWjEYhk7Xo?si=0LnCtarhurCiIS7O",
                 duracion: "2:33",
             }
         ]
     },
     {
-        album: "Help!",
-        anio: 1965,
+        album: "Sgt Peppers Lonely Hearts Club Band",
+        anio: 1967,
         discografica: "Parlophone",
-        num_canciones: 14,
+        num_canciones: 13,
         canciones: [
             {
-                titulo: "Help!",
-                link: "https://www.youtube.com/embed/MKUex3fci5c?si=UkmtCOFf1ieYvZ_1",
-                duracion: "2:19",
+                titulo: "Sgt Peppers Lonely Hearts Club Band",
+                link: "https://www.youtube.com/embed/VtXl8xAPAtA?si=iRkNShXbmgvLhWwL",
+                duracion: "2:02",
             },
             {
-                titulo: "The Night Before",
-                link: "https://www.youtube.com/embed/7tD40D7jk-Q?si=iCsLD2m91Lnnd79x",
-                duracion: "2:34",
+                titulo: "With A Little Help From My Friends",
+                link: "https://www.youtube.com/embed/0C58ttB2-Qg?si=qqFfpPXwxggGYVu5",
+                duracion: "2:44",
             },
             {
-                titulo: "You've Got To Hide Your Love Away",
-                link: "https://www.youtube.com/embed/V8nLraecPRY?si=_3XndXMVJT_Mm4Tl",
-                duracion: "2:08",
+                titulo: "Lucy In The Sky With Diamonds",
+                link: "https://www.youtube.com/embed/naoknj1ebqI?si=HSZ5wSRWXcEOl6ni",
+                duracion: "3:28",
             },
             {
-                titulo: "I Need You",
-                link: "https://www.youtube.com/embed/6t24nX_sak8?si=s_XwMC1LwHmzsfPV",
-                duracion: "2:27",
+                titulo: "Getting Better",
+                link: "https://www.youtube.com/embed/EGlo9LzmOME?si=S8zayh0VKGeqS1PJ",
+                duracion: "2:48",
             },
             {
-                titulo: "Another Girl",
-                link: "https://www.youtube.com/embed/EMBYNWr5R_U?si=95CKPKETApY5jAnw",
-                duracion: "2:05",
-            },
-            {
-                titulo: "You're Going To Lose That Girl",
-                link: "https://www.youtube.com/embed/vqpEZuv29qE?si=740qJDBwOnJUF2dO",
-                duracion: "2:17",
-            },
-            {
-                titulo: "Ticket To Ride",
-                link: "https://www.youtube.com/embed/SyNt5zm3U_M?si=RN6xDuV2OrYwAw6I",
-                duracion: "3:10",
-            },
-            {
-                titulo: "Act Naturally",
-                link: "https://www.youtube.com/embed/yjJd8rZPcAQ?si=TEFr6nKYoB8L-fcJ",
-                duracion: "2:31",
-            },
-            {
-                titulo: "It's Only Love",
-                link: "https://www.youtube.com/embed/OPiKDHYCkjs?si=RO8foMpx_8vTfV_y",
-                duracion: "1:56",
-            },
-            {
-                titulo: "You Like Me Too Much",
-                link: "https://www.youtube.com/embed/ZqCf3D26YlA?si=DDUjXj_pBEmS-pVb",
+                titulo: "Fixing A Hole",
+                link: "https://www.youtube.com/embed/UPBd8eHQqIw?si=oqhdZA9h3g-yU4ql",
                 duracion: "2:36",
             },
             {
-                titulo: "Tell Me What You See",
-                link: "https://www.youtube.com/embed/bztiAcsATyI?si=BAIsbNiUM9i_sEeb",
-                duracion: "2:40",
+                titulo: "She's Leaving Home",
+                link: "https://www.youtube.com/embed/VaBPY78D88g?si=_poabTiKSN8rspf8",
+                duracion: "3:35",
             },
             {
-                titulo: "I've Just Seen a Face",
-                link: "https://www.youtube.com/embed/m8LbJfC0SYM?si=wGY0IVA1k0mVXmJ1",
-                duracion: "2:04",
+                titulo: "Being For The Benefit Of My. Kite!",
+                link: "https://www.youtube.com/embed/bJVWZy4QOy0?si=ymjUovDg87YkmYKF",
+                duracion: "2:37",
             },
             {
-                titulo: "Yesterday",
-                link: "https://www.youtube.com/embed/NrgmdOz227I?si=tpGr5LjyJ3b_Tx83",
-                duracion: "2:05",
+                titulo: "Within You Without You",
+                link: "https://www.youtube.com/embed/HsffxGyY4ck?si=4XUGTM7yNlCJsO_4",
+                duracion: "5:05",
             },
             {
-                titulo: "Dizzy Miss Lizzle",
-                link: "https://www.youtube.com/embed/psJ1cHm_su4?si=_9DMCKaCGCjkOFi2",
-                duracion: "2:54",
+                titulo: "When I'm Sixty Four",
+                link: "https://www.youtube.com/embed/HCTunqv1Xt4?si=3A76M3z5MKgijUJH",
+                duracion: "2:37",
+            },
+            {
+                titulo: "Lovely Rita",
+                link: "https://www.youtube.com/embed/ysDwR5SIR1Q?si=bQifrfIgAWOK2bf1",
+                duracion: "2:43",
+            },
+            {
+                titulo: "Good Morning Good Morning",
+                link: "https://www.youtube.com/embed/sjb9AxDkwAQ?si=tI1ZzSB44mRaBfM4",
+                duracion: "2:42",
+            },
+            {
+                titulo: "Sgt Peppers Lonely Hearts Club Band - Reprise",
+                link: "https://www.youtube.com/embed/aP47nqo2cf4?si=iSAcd6ZpRciZsAtC",
+                duracion: "1.20",
+            },
+            {
+                titulo: "A Day In The Life",
+                link: "https://www.youtube.com/embed/UYeV7jLBXvA?si=kFY1mB_Olb6x8Php",
+                duracion: "5:07",
             }
         ]
     }
@@ -203,3 +203,4 @@ function cambiarVideo(albumIndex, cancionIndex) {
     const cancion = albums[albumIndex].canciones[cancionIndex];
     video.src = cancion.link;
 }
+
